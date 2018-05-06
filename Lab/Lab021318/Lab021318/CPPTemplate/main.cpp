@@ -1,10 +1,9 @@
 
 /* 
  * File:   main.cpp
- * Author: Blake Ward, Angel Castaeda
- * Created on February 13, 2018, 11:27 AM
+ * Author: Juan Castellon
+ * Created on April 13, 2018, 11:27 AM
  * Purpose: CPP Template
- *          To be copied for each project
  */
 
 //System Libraries
@@ -22,11 +21,15 @@ using namespace std;//namespace I/O stream library created
 int main(int argc, char** argv) {
     //Declare Variables
     
+    
     //Initial Variables
+    
     
     //Map/Process Inputs to Outputs
     
+    
     //Display Outputs
+    
     
     //Exit Program!
     return 0;
