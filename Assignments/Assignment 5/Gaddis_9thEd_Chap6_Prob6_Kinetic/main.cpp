@@ -39,6 +39,6 @@ int main(int argc, char** argv) {
     return 0;
 }
 float kEnrgy(float mass,float velo){
-    return mass*velo*velo*.5;
+    return mass*velo*velo*.5;//Kinetic Energy Equation
 }
 

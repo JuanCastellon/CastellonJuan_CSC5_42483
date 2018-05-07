@@ -2,8 +2,8 @@
 /* 
  * File:   main.cpp
  * Author: Juan Castellon
- * Created on April 13, 2018, 11:27 AM
- * Purpose: CPP Template
+ * Created on May 6th, 2018, 9:00 AM
+ * Purpose: Coin Toss Simulator
  */
 
 //System Libraries
