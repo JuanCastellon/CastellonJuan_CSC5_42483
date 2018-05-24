@@ -8,6 +8,7 @@
 
 //System Libraries
 #include <iostream> //I/O Library -> cout, endl
+#include <fstream>  //Input/Output to files
 using namespace std;//namespace I/O stream library created
 
 //User Libraries
@@ -16,17 +17,29 @@ using namespace std;//namespace I/O stream library created
 //Math, Physics, Science, Conversions, 2-D Array C
 
 //Function Prototypes
+void fill(int [], int);
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
-    //Declare Variables
+    //Setting the random number seed
     srand(static_cast<unsigned int>(time(0)));
     
+    //Declare Variables
+    const int SIZE=10;
+    string name;//Name of the file
+    int array[SIZE]="list.dat";
+    
     //Initial Variables
-    for(int i=1;i<100;i++){
-        cout<<rand()%10+1;
-        cout<<endl;
-    }
+    cout<<"This program creates a file you name and fills it with random "
+            "numbers and then displays the highest/lowest values, the total "
+            "of all values, and the average."<<endl;
+    cout<<"Please input a name for the file."<<endl;
+    cin>>name;
+    
+    ifstream list;
+    list.open();
+    
+    
     
     //Map/Process Inputs to Outputs
     
