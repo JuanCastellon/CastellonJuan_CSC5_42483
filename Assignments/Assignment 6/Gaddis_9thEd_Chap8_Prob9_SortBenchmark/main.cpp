@@ -36,7 +36,16 @@ int main(int argc, char** argv) {
     
     //Map/Process Inputs to Outputs
     bubSort2(array1,SIZE);
+    for(int count=0;count<SIZE;count++){
+        cout<<array1[count]<<" ";
+    }
+    cout<<endl;
+    
     selSort2(array2,SIZE);
+    for(int count=0;count<SIZE;count++){
+        cout<<array1[count]<<" ";
+    }
+    cout<<endl;
 
     
     //Display Outputs
