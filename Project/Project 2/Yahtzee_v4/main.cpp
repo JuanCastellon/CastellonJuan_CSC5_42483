@@ -24,8 +24,8 @@ using namespace std;
 //123412341234123412341234123412341234123412341234123412341234123412341234123412
 
 //Starting the game
-int pTotal(int [],int);                  //Calculates the 
-bool first(int [],int,string &,string &);//
+int pTotal(int [],int);                  //Calculates the total roll of a player
+bool first(int [],int,string &,string &);//Sees who goes first  
 
 //Essentials for playing the game
 int turn(int [],int,string &,int &,int=0);//Turns for the game
@@ -55,7 +55,6 @@ int main(int argc, char** argv) {
     //12341234123412341234123412341234123412341234123412341234123412341234123412
     
     //Array sizing constants
-    
     const int DICE=5;  //Number of dice thrown
     
     
@@ -70,7 +69,7 @@ int main(int argc, char** argv) {
     
     //Scoring and other game-related stuff
     char deci;                  //Decision to play the game or not
-    int turns=1;            //Game lasts 20 turns, starts at 1
+    int turns=1;                //Game lasts 20 turns, starts at 1
     int roll[DICE]={};          //Array for holding the dice
     int p1Tot,p2Tot;            //Total score for that game
     int yah1,yah2=0;            //How many Yahtzees scored in a game for players
@@ -85,7 +84,6 @@ int main(int argc, char** argv) {
     //Initialize
     yah1=yah2=p1Tot=p2Tot=total=0;
     
-    ifstream in;  //Input File
     ofstream out; //Output File
     string fileIn;//Name of file
     char fileOut[]="WinLoss.dat";//Outputs the win and loss for players
@@ -102,6 +100,7 @@ int main(int argc, char** argv) {
     //Input Validation/Proceeding or Exiting Main
     do{
         cin.get(deci);
+            
     }while(deci!='y'&&deci!='n');
     cout<<endl;
     
@@ -229,7 +228,7 @@ void rolDice(int roll[],int dice){
     cout<<endl;
 }
 
-//Function for playing the game during the upper section
+//Function for playing the game's turns
 int turn(int roll[],int dice,string &current,int &yah,
          int oLoad){
     int choice,score,rolls;
@@ -254,8 +253,7 @@ int turn(int roll[],int dice,string &current,int &yah,
     cout<<"Chance         = 13"<<endl;
     
     
-    //Input Validation:Checks to see if choice is within the range
-    //If more than 1 yahtzee has been scored, and if already chosen chance
+    //Input Validation:Checks to see if choice is within the range  
     do{
     cin>>choice;
     }while(choice<1&&choice>13);
